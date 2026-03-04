@@ -9,7 +9,6 @@ A TypeScript CLI tool built with [Effect](https://effect.website) that generates
 - **Variable Commit Density**: Set minimum and maximum commits per active day
 - **Automated Repository Creation**: Each run creates a new timestamped git repository
 - **Type-Safe CLI**: Built with Effect's type-safe command-line interface
-- **Modern TypeScript**: Strict type checking with ES2022 target
 
 ## Installation
 
@@ -50,13 +49,13 @@ node dist/bin.js
 
 ### Command Options
 
-| Option | Short | Description | Default |
-|--------|-------|-------------|---------|
-| `--days-before` | `-db` | Number of days to go back in history | 365 |
-| `--days-after` | `-da` | Number of days to go forward | 60 |
-| `--frequency` | `-f` | Percentage chance to commit each day (0-100) | 80 |
-| `--max-commits-per-day` | `-mcpd` | Maximum commits per active day | 15 |
-| `--min-commits-per-day` | N/A | Minimum commits per active day | 0 |
+| Option                  | Short   | Description                                  | Default |
+| ----------------------- | ------- | -------------------------------------------- | ------- |
+| `--days-before`         | `-db`   | Number of days to go back in history         | 365     |
+| `--days-after`          | `-da`   | Number of days to go forward                 | 60      |
+| `--frequency`           | `-f`    | Percentage chance to commit each day (0-100) | 80      |
+| `--max-commits-per-day` | `-mcpd` | Maximum commits per active day               | 15      |
+| `--min-commits-per-day` | N/A     | Minimum commits per active day               | 0       |
 
 ### Examples
 
@@ -171,6 +170,7 @@ yarn check
 ## CI/CD
 
 GitHub Actions workflow (`.github/workflows/check.yml`) automatically:
+
 - Builds the project
 - Runs type checking
 - Executes linting
@@ -185,22 +185,11 @@ MIT
 ## Contributing
 
 Contributions are welcome! Please ensure:
+
 - All tests pass (`yarn test`)
 - Code passes linting (`yarn lint`)
 - TypeScript compiles without errors (`yarn check`)
 
 ## Disclaimer
 
-**This tool is intended strictly for testing and development purposes only.** It is designed to help developers:
-- Test git workflows and automation scripts
-- Demonstrate commit history visualization tools
-- Practice git operations in isolated test repositories
-- Develop and debug applications that interact with git repositories
-
-**This tool should NOT be used to:**
-- Fake contribution activity on your GitHub profile
-- Mislead employers, collaborators, or the open-source community
-- Artificially inflate contribution graphs
-- Misrepresent your actual development activity
-
-Using this tool to create misleading activity is unethical and may violate GitHub's Terms of Service. Always be honest and transparent about your contributions and development work.
+This tool is intended for educational purposes and personal use. Be mindful of GitHub's Terms of Service when using automated commit generation tools.
